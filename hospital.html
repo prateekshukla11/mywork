@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Patients</h2>
+            <ul id="patientList"></ul>
+        </section>
+        <section>
+            <h2>Doctors</h2>
+            <ul id="doctorList"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+CSS (styles.css):
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    width: 45%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+JavaScript (script.js):
+
+javascript
+Copy code
+const patients = [
+    { name: 'John Doe', age: 35, gender: 'Male' },
+    { name: 'Jane Smith', age: 28, gender: 'Female' },
+    // Add more patients here...
+];
+
+const doctors = [
+    { name: 'Dr. David Brown', specialization: 'Cardiologist' },
+    { name: 'Dr. Sarah Johnson', specialization: 'Pediatrician' },
+    // Add more doctors here...
+];
+
+function displayPatients() {
+    const patientList = document.getElementById('patientList');
+    patientList.innerHTML = '';
+    patients.forEach((patient) => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `Name: ${patient.name}, Age: ${patient.age}, Gender: ${patient.gender}`;
+        patientList.appendChild(listItem);
+    });
+}
+
+function displayDoctors() {
+    const doctorList = document.getElementById('doctorList');
+    doctorList.innerHTML = '';
+    doctors.forEach((doctor) => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `Name: ${doctor.name}, Specialization: ${doctor.specialization}`;
+        doctorList.appendChild(listItem);
+    });
+}
+
+displayPatients();
+displayDoctors();
+This code provides a simple hospital management system that displays a list of patients and doctors on a web page. You can extend it further to include more features like adding, deleting, or updating patients/doctors, storing data in a database, and more advanced functionalities based on your requirements.
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    width: 45%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+const patients = [
+    { name: 'John Doe', age: 35, gender: 'Male' },
+    { name: 'Jane Smith', age: 28, gender: 'Female' },
+    // Add more patients here...
+];
+
+const doctors = [
+    { name: 'Dr. David Brown', specialization: 'Cardiologist' },
+    { name: 'Dr. Sarah Johnson', specialization: 'Pediatrician' },
+    // Add more doctors here...
+];
+
+function displayPatients() {
+    const patientList = document.getElementById('patientList');
+    patientList.innerHTML = '';
+    patients.forEach((patient) => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `Name: ${patient.name}, Age: ${patient.age}, Gender: ${patient.gender}`;
+        patientList.appendChild(listItem);
+    });
+}
+
+function displayDoctors() {
+    const doctorList = document.getElementById('doctorList');
+    doctorList.innerHTML = '';
+    doctors.forEach((doctor) => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `Name: ${doctor.name}, Specialization: ${doctor.specialization}`;
+        doctorList.appendChild(listItem);
+    });
+}
+
+displayPatients();
+displayDoctors();
+
+
+
+
+
